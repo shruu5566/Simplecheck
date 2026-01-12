@@ -1,28 +1,29 @@
 #calculator linked to vs code
 #calculator using functions and loop
-def add(a,b);
+def add(a,b):
   return a+b
-def subtract(a,b);
+def subtract(a,b):
   return a-b
-def multiply(a,b);
+def multiply(a,b):
   return a*b
-def divide(a,b);
+def divide(a,b):
   if b!=0:
     return a/b
   else:
     return "Error: Division by zero"
-  while True:
-    print("\--- Simple Calculator---")
+while True:
+    print("--- Simple Calculator---")
     print("1. Addition")
     print("2. Subtraction")
     print("3. Multiplication")
     print("4. Division")
     print("5. Exit")
-    choice=input("Enter your choioce(1-5):")
+    choice=input("Enter your choice(1-5):")
+
     if choice=="5":
       print("calculator closed")
       break
-    if choice in["1","2","3","4"];
+    if choice in["1","2","3","4"]:
         num1=float(input("Enter first number:"))
         num2=float(input("Enter second number:"))
         if choice =="1":
@@ -33,8 +34,8 @@ def divide(a,b);
           print("Result:", multiply(num1,num2)) 
         elif choice =="4":
           print("Result:", divide(num1,num2))
-        else:
-          print("invalid choice. Please try again.")
+    else:
+        print("invalid choice. Please try again.")
         
           
         
