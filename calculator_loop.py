@@ -10,7 +10,15 @@ def divide(a,b):
   if b!=0:
     return a/b
   else:
-    return "Error: Division by zero"
+    return  "❌ Error: Division by zero is not allowed"
+def get_numbers():
+    try:
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        return a, b
+    except ValueError:
+        print("❌ Invalid input! Please enter numbers only.")
+        return None, None
 while True:
     print("--- Simple Calculator---")
     print("1. Addition")
@@ -24,8 +32,11 @@ while True:
       print("calculator closed")
       break
     if choice in["1","2","3","4"]:
-        num1=float(input("Enter first number:"))
-        num2=float(input("Enter second number:"))
+        num1, num2 = get_numbers()
+        if num1 is None:
+            continue
+
+        
         if choice =="1":
           print("Result:", add(num1,num2))
         elif choice =="2":
