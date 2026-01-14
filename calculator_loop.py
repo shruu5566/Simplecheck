@@ -11,6 +11,9 @@ def divide(a,b):
     return a/b
   else:
     return  "❌ Error: Division by zero is not allowed"
+def power(a, b):
+    return a ** b
+
 def get_numbers():
     try:
         a = float(input("Enter first number: "))
@@ -25,13 +28,14 @@ while True:
     print("2. Subtraction")
     print("3. Multiplication")
     print("4. Division")
-    print("5. Exit")
-    choice=input("Enter your choice(1-5):")
+    print("5. Power")
+    print("6. Exit")
+    choice=input("Enter your choice(1-6):")
 
-    if choice=="5":
+    if choice=="6":
       print("calculator closed")
       break
-    if choice in["1","2","3","4"]:
+    if choice in["1","2","3","4","5"]:
         num1, num2 = get_numbers()
         if num1 is None:
             continue
@@ -45,6 +49,9 @@ while True:
           print("Result:", multiply(num1,num2)) 
         elif choice =="4":
           print("Result:", divide(num1,num2))
+        elif choice == "5":
+          print("Result:", power(num1, num2))
+
     else:
         print("invalid choice. Please try again.")
         
